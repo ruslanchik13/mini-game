@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin-top: 200px;
+
+}
+
+.disable {
+    display: none;
+    opacity: 0;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/bg.png');
+    margin: 0 auto;
+    width: 632px;
+    height: 528px;
+}
+
+.timer-on {
+    background-image: url('../images/bg.png');
+    background-color: rgba(0,0,0,.7);
+    background-blend-mode: multiply;
+}
+
+.startBtn {
+    cursor: pointer;
+    border: none;
+    background: rgba(255,255,255,.3);
+    width: 67px;
+    height: 39px;
+}
+
+.startBtn:hover {
+    background-color: #fff;
+}
+
+.timer__counter {
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    border-radius: 50%;
+    padding: 10px 30px;
+    background: rgba(255,255,255,.3);
+
+}
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    width: 632px;
+    height: 528px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/bg.png');
+}
+
+.YES {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 280px;
+    z-index: 3;
+}
+
+.NO {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 280px;
+    z-index: 3;
+    animation: forX 2s ease 0s infinite normal forwards;
+}
+
+
+
+.gameBar {
+    margin-left: 129px;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    height: 30px;
+    background-color: rgba(255,255,255,.3);
+    animation: forGameBar 1s ease 0s 1 normal forwards;
+}
+
+.gameBar__title {
+    font-size: 10px;
+}
+
+.gameBar__item {
+    text-align: center;
+}
+
+.gameBar__setting {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.title {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    width: 632px;
+}
+
+.cards {
+    margin-top: 30px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.cards__anim {
+    animation: forBlocks 1s ease 0s 1 normal forwards;
+}
+
+
+.cards__item {
+    text-align: center;
+}
+
+.cards__item + .cards__item {
+    margin-left: 20px;
+}
+
+.item__title {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.item__box {
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px;
+    height: 127px;
+    width: 215px;
+    background-color: #fff;
+}
+
+.toggles {
+    display: flex;
+}
+
+.toggle__item + .toggle__item {
+    margin-left: 5px;
+}
+
+.toggle__item {
+    cursor: pointer;
+    border: none;
+    background: rgba(255,255,255,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 67px;
+    height: 39px;
+}
+
+.left {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.right {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.toggle__item:hover {
+    background-color: white ;
+}
+
+.gameOverScreen {
+    margin: 0 auto;
+    width: 632px;
+    height: 528px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/bg.png');
+}
+
+.OverContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 528px;
+}
+
+.gameOverScreen__title {
+    font-size: 50px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.gameOverScreen__info {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.info__item {
+    margin-top: 20px;
+    display: flex;
+}
+
+.info__title {
+    width: 300px;
+}
+
+.againBtn {
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: blue;
+    border-radius: 20px;
+}
+
+.againBtn:hover {
+    background-color: #5252c2;
+}
+
+@keyframes forX {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    10% {
+        transform: rotate(8deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-8deg);
+    }
+
+    90% {
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes forGameBar {
+    0% {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes forBlocks {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+

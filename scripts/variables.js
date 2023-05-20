@@ -1,0 +1,32 @@
+const variables = new Object(
+ {
+     leftBox: document.querySelector('#leftBox'),
+     rightBox: document.querySelector('#rightBox'),
+     leftBtn: document.querySelector('#leftBtn'),
+     rightBtn: document.querySelector('#rightBtn'),
+     startBtn: document.querySelector('#start'),
+     counterId: document.querySelector('#counter'),
+     timer: document.querySelector('#timerPreload'),
+     timerCounter: document.querySelector('#timerCounter'),
+     main: document.querySelector('#main'),
+     gameTimer: document.querySelector('#gameTimer'),
+     gameLvl: document.querySelector('#gameLvl'),
+     gameBonus: document.querySelector('#gameBonus'),
+     finalCountAnswers: document.querySelector('#finalCountAnswers'),
+     finalResult: document.querySelector('#finalResult'),
+     finalLevel: document.querySelector('#finalLevel'),
+     final: document.querySelector('#final'),
+     noAnim: document.querySelector('#noAnim'),
+     yesAnim: document.querySelector('#yesAnim'),
+     againBtn: document.querySelector('#againBtn'),
+     cards: document.querySelector('#cards'),
+     colors: ['red', 'blue', 'green', 'black'],
+     words: ['красный', 'синий', 'зеленый', 'черный'],
+     counter: 0,
+     gameBonusCounter: 0,
+     gameTimerCounter: 2,
+     answers: 0,
+     lvl: document.querySelector('#gameLvl'),
+})
+
+export default variables;

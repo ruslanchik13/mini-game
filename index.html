@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="timer" id="timerPreload">
+    <button class="startBtn" id="start">начать</button>
+    <div id="timerCounter" class="timer__counter disable">3</div>
+</div>
+<div id="main" class="main">
+    <div id="yesAnim" class="YES">
+        <img src="./images/plus.svg" alt="">
+    </div>
+    <div id="noAnim" class="NO">
+        <img src="./images/X.svg" alt="">
+    </div>
+    <div class="gameBar">
+        <div class="gameBar__item">
+            <div class="gameBar__title">ВРЕМЯ</div>
+            <div id="gameTimer" class="gameBar__setting">00:59</div>
+        </div>
+        <div class="gameBar__item">
+            <div class="gameBar__title">УРОВЕНЬ</div>
+            <div id="gameLvl" class="gameBar__setting">1</div>
+        </div>
+        <div class="gameBar__item">
+            <div class="gameBar__title">ОЧКИ</div>
+            <div class="gameBar__setting" id="counter"></div>
+        </div>
+        <div class="gameBar__item">
+            <div class="gameBar__title">БОНУС</div>
+            <div id="gameBonus" class="gameBar__setting">x1</div>
+        </div>
+    </div>
+    <div class="title">Совпадает ли название цвета на левой карточке с цветом текста на правой карточке?</div>
+    <div id="cards" class="cards cards__anim">
+        <div class="cards__item">
+            <div class="item__title">Значение</div>
+            <div id="leftBox" class="item__box"></div>
+        </div>
+        <div class="cards__item">
+            <div class="item__title">Цвет</div>
+            <div id="rightBox" class="item__box"></div>
+        </div>
+    </div>
+    <div class="toggles">
+        <button id="leftBtn" class="toggle__item left">Нет</button>
+        <button id="rightBtn" class="toggle__item right">Да</button>
+    </div>
+</div>
+<div id="final" class="gameOverScreen">
+    <div class="OverContainer">
+        <div class="gameOverScreen__title">Ваши результаты</div>
+        <div class="gameOverScreen__info">
+            <div class="info__item">
+                <div class="info__title">Текущий результат</div>
+                <div id="finalResult" class="info__result"></div>
+            </div>
+            <div class="info__item">
+                <div class="info__title">Верных ответов</div>
+                <div id="finalCountAnswers" class="info__result"></div>
+            </div>
+            <div class="info__item">
+                <div class="info__title">Максимальный уровень</div>
+                <div id="finalLevel" class="info__result"></div>
+            </div>
+        </div>
+        <button id="againBtn" class="againBtn">Заново</button>
+    </div>
+</div>
+<script src="./scripts/index.js" type="module"></script>
+</body>
+</html>
